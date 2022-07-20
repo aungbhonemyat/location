@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  <a href="http://localhost/admin">Admin Login</a>
+  <a href="/chooseu/admin">Admin Login</a>
+
+  <!--change this file for chooseu homepage-->
 </body>
 
 </html>
