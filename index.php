@@ -9,7 +9,6 @@ if (isset($_SESSION['user_id'])) {
   header("Location: add.php");
 }
 
-
 if (isset($_POST["signin"])) {
   $email = mysqli_real_escape_string($conn, $_POST["email"]);
   $password = mysqli_real_escape_string($conn, md5($_POST["password"]));
