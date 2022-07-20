@@ -5,8 +5,8 @@ include '../config.php';
 session_start();
 error_reporting(0);
 
-if (isset($_SESSION['admin_name'])) {
-  echo "<script>alert(" . $_SESSION['admin_name'] . ")</script>";
+if (isset($_SESSION['user_id'])) {
+  echo "<script>alert(" . $_SESSION['user_id'] . ")</script>";
   header("Location: add.php");
 }
 
@@ -19,7 +19,7 @@ if (isset($_POST["signin"])) {
 
   if (mysqli_num_rows($check_email) > 0 && $email === "admin@gmail.com") {
     $row = mysqli_fetch_assoc($check_email);
-    $_SESSION['admin_name'] = $row['id'];
+    $_SESSION['user_id'] = $row['id'];
     header("Location: add.php");
   } else {
     echo "<script>alert('Email or password is incorrect')</script>";
