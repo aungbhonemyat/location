@@ -6,6 +6,7 @@ session_start();
 error_reporting(0);
 
 if(isset($_SESSION['user_id'])){
+  echo "<script>alert(". $_SESSION['user_id'] .")</script>";
   header("Location: add.php");
 }
 
